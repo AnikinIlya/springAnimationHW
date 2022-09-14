@@ -14,25 +14,33 @@ class ViewController: UIViewController {
     @IBOutlet var animationInfoLabel: UILabel!
     @IBOutlet var runAnimationButton: SpringButton!
     
+    private let animations = Animation.getAnimationList()
+    private var animationCounter = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        animationInfoLabel.text = animations[animationCounter].animationInfo
+    }
     
     @IBAction func runAnimationButtonPressed() {
-        springView.animation = "pop"
-        springView.curve = "easeInQuint"
-        springView.force = CGFloat.random(in: 0...2)
-        springView.duration = CGFloat.random(in: 0...1)
-        springView.delay = CGFloat.random(in: 0...1)
+        
+        springView.animation = animations[animationCounter].preset
+        springView.curve = animations[animationCounter].curve
+        springView.force = CGFloat(animations[animationCounter].force)
+        springView.duration = CGFloat(animations[animationCounter].duration)
+        springView.delay = CGFloat(animations[animationCounter].delay)
         springView.animate()
         
-        animationInfoLabel.text =
-"""
-preset: \(springView.animation)
-curve: \(springView.curve)
-force: \(String(format: "%.2f", springView.force))
-duration: \(String(format: "%.2f", springView.duration))
-delay: \(String(format: "%.2f", springView.delay))
-"""
-
-        runAnimationButton.titleLabel?.text = "Run \(springView.animation)"
+        animationInfoLabel.text = animations[animationCounter].animationInfo
+        
+        animationCounter += 1
+        
+        if animationCounter > animations.count - 1 {
+            animationCounter = 0
+        }
+        
+        runAnimationButton.setTitle("Run \(animations[animationCounter].preset)", for: .normal)
     }
 }
 

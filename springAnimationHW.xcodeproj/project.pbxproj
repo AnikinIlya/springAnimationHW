@@ -15,6 +15,7 @@
 		093C279A28D2499800B55092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 093C279828D2499800B55092 /* LaunchScreen.storyboard */; };
 		093C27A328D24A5400B55092 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 093C27A228D24A5400B55092 /* SpringAnimation */; };
 		093C27AB28D2563500B55092 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C27AA28D2563500B55092 /* Animations.swift */; };
+		093C27AD28D25D3900B55092 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C27AC28D25D3800B55092 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		093C279928D2499800B55092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		093C279B28D2499800B55092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		093C27AA28D2563500B55092 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		093C27AC28D25D3800B55092 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				093C27A428D2554800B55092 /* ViewControllers */,
 				093C27A528D2555600B55092 /* Storyboards */,
 				093C27A728D255B600B55092 /* Models */,
+				093C27AF28D25F3E00B55092 /* Services */,
 				093C27A628D2559000B55092 /* SupportFiles */,
 				093C279628D2499800B55092 /* Assets.xcassets */,
 				093C279B28D2499800B55092 /* Info.plist */,
@@ -102,6 +105,14 @@
 				093C27AA28D2563500B55092 /* Animations.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		093C27AF28D25F3E00B55092 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				093C27AC28D25D3800B55092 /* DataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				093C279228D2499100B55092 /* ViewController.swift in Sources */,
+				093C27AD28D25D3900B55092 /* DataManager.swift in Sources */,
 				093C278E28D2499100B55092 /* AppDelegate.swift in Sources */,
 				093C27AB28D2563500B55092 /* Animations.swift in Sources */,
 				093C279028D2499100B55092 /* SceneDelegate.swift in Sources */,
