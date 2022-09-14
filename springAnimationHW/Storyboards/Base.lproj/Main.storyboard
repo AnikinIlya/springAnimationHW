@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="springAnimationHW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FsY-Sj-7um" customClass="SpringView" customModule="SpringAnimation">
+                                <rect key="frame" x="87" y="119" width="240" height="187"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="animationInfo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSV-LT-GnK">
+                                        <rect key="frame" x="8" y="8" width="224" height="171"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RSV-LT-GnK" secondAttribute="height" multiplier="224:171" id="449-km-kDi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RSV-LT-GnK" secondAttribute="bottom" constant="8" id="AmZ-X7-Tw4"/>
+                                    <constraint firstItem="RSV-LT-GnK" firstAttribute="top" secondItem="FsY-Sj-7um" secondAttribute="top" constant="8" id="Z6C-jA-Ul6"/>
+                                    <constraint firstItem="RSV-LT-GnK" firstAttribute="leading" secondItem="FsY-Sj-7um" secondAttribute="leading" constant="8" id="Zmm-au-68i"/>
+                                    <constraint firstAttribute="height" constant="187" id="czb-8C-9s9"/>
+                                    <constraint firstAttribute="trailing" secondItem="RSV-LT-GnK" secondAttribute="trailing" constant="8" id="hPe-pp-9aq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cr-nK-R12" customClass="SpringButton" customModule="SpringAnimation">
+                                <rect key="frame" x="87" y="688.5" width="240" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Run animation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runAnimationButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rzu-Sa-Ehr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2cr-nK-R12" secondAttribute="bottom" multiplier="1.2" id="TSg-kl-VaE"/>
+                            <constraint firstItem="2cr-nK-R12" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vul-Eq-uyF"/>
+                            <constraint firstItem="2cr-nK-R12" firstAttribute="width" secondItem="FsY-Sj-7um" secondAttribute="width" id="cHe-s8-6iM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FsY-Sj-7um" secondAttribute="trailing" constant="87" id="pPY-5q-kDx"/>
+                            <constraint firstItem="FsY-Sj-7um" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="reW-k0-h7z"/>
+                            <constraint firstItem="FsY-Sj-7um" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="sIa-Xa-ZTR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationInfoLabel" destination="RSV-LT-GnK" id="Lfl-Ko-rhY"/>
+                        <outlet property="runAnimationButton" destination="2cr-nK-R12" id="DaL-dQ-Zu7"/>
+                        <outlet property="springView" destination="FsY-Sj-7um" id="myX-Vv-xNL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="55.580357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
